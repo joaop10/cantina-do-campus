@@ -1,0 +1,98 @@
+/* Cantina do Campus: arquivo com seis erros plantados. Encontre e corrija. */
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  color: #1f2937;
+  background: #ffffff;
+}
+
+/* ---------- Topo ---------- */
+.topo {
+  background: #14213d;
+  color: #ffffff;
+  padding: 16px 24px;
+}
+
+.marca {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  margin-left: 610px;
+}
+
+.menu a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.menu a:focus {
+  outline: none;
+}
+
+/* ---------- Conteúdo ---------- */
+.conteudo {
+  padding: 24px;
+}
+
+h1 {
+  color: #14213d !important;
+  margin-top: 0;
+}
+
+.subtitulo {
+  color: #c4c4c4;
+}
+
+/* ---------- Cartões ---------- */
+.cartoes {
+  /* complete com flexbox */
+}
+
+.cartao {
+  width: 100%;
+  padding: 20px;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.cartao h3 {
+  margin: 0 0 6px;
+}
+
+#cardapio .preco {
+  font-weight: bold;
+  color: #14213d;
+}
+
+.promocao {
+  color: #b91c1c;
+}
+
+/* ---------- Botão e rodapé ---------- */
+.botao {
+  display: inline-block;
+  padding: 12px 20px;
+  background: #fca311;
+  color: #14213d;
+  font-weight: bold;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.rodape {
+  background: #14213d;
+  color: #c7cee0;
+  padding: 16px 24px;
+  text-align: center;
+}
