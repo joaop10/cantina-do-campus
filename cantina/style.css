@@ -72,7 +72,11 @@ h1 {
   margin: 0 0 6px;
 }
 
-#cardapio .preco {
+/* Especificidade: o seletor com ID (#cardapio .preco = 1,1,0) vencia
+   .promocao (0,1,0) por causa do ID, e o preco em promocao ficava azul.
+   Sem o ID os dois empatam em 0,1,0 e vence quem vem depois: .promocao.
+   Por isso a ordem destas duas regras precisa ser mantida. */
+.preco {
   font-weight: bold;
   color: #14213d;
 }
