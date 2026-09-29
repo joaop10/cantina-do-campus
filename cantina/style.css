@@ -45,7 +45,9 @@ body {
 }
 
 h1 {
-  color: #14213d !important;
+  /* Cascata: nenhuma outra regra disputa a cor do h1, entao a marcacao de
+     prioridade era so barulho. Sem ela a cascata normal entrega o mesmo azul. */
+  color: #14213d;
   margin-top: 0;
 }
 
