@@ -62,7 +62,9 @@ h1 {
 }
 
 .subtitulo {
-  color: #c4c4c4;
+  /* Contraste: #c4c4c4 sobre branco da 1,74:1, muito abaixo dos 4,5:1 que a
+     WCAG pede para texto. #4b5563 mantem o ar de legenda e mede 7,56:1. */
+  color: #4b5563;
 }
 
 /* ---------- Cartões ---------- */
