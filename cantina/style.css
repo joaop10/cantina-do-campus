@@ -45,8 +45,14 @@ body {
   text-decoration: none;
 }
 
-.menu a:focus {
-  outline: none;
+/* Foco: outline none apagava o unico sinal de onde o teclado esta. O anel
+   ambar sobre o azul do topo mede 7,9:1. :focus-visible cobre a navegacao por
+   teclado e :focus garante o contorno tambem em navegadores antigos. */
+.menu a:focus,
+.menu a:focus-visible {
+  outline: 3px solid #fca311;
+  outline-offset: 4px;
+  border-radius: 2px;
 }
 
 /* ---------- Conteúdo ---------- */
