@@ -1,4 +1,7 @@
-/* Cantina do Campus: arquivo com seis erros plantados. Encontre e corrija. */
+/* Cantina do Campus - encontro 4.
+   Os seis erros plantados estao corrigidos e comentados no ponto em que
+   aconteciam. O topo e a grade de cartoes usam flexbox.
+   Nenhuma declaracao usa marcacao de prioridade. */
 
 /* Box model: por padrao width mede apenas o conteudo, entao os 20px de padding
    e os 2px de borda do .cartao eram somados por fora (1052 + 40 + 4 = 1096px
@@ -23,6 +26,14 @@ body {
   background: #14213d;
   color: #ffffff;
   padding: 16px 24px;
+  /* Flexbox: marca e menu na mesma linha, um em cada ponta.
+     space-between joga todo o espaco livre para o meio, sem numero magico.
+     wrap deixa o menu cair para baixo da marca em telas bem estreitas. */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
 .marca {
@@ -34,12 +45,17 @@ body {
   list-style: none;
   margin: 0;
   padding: 0;
+  /* Os tres links lado a lado, separados por gap em vez de margin. */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
 }
 
 /* Alinhamento: aqui existia uma regra .menu li com margin-left de 610px, um
-   numero de chute que empurrava cada item para a direita e so "funcionava" nesta largura
-   exata de tela. A regra saiu inteira: o espaco entre os itens passa a vir do
-   gap do flex container e a posicao do menu vem do justify-content do .topo. */
+   numero de chute que empurrava cada item para a direita e so "funcionava"
+   nesta largura exata de tela. A regra saiu inteira: o espaco entre os itens
+   vem do gap do flex container e a posicao do menu vem do justify-content
+   do .topo. */
 
 .menu a {
   color: #ffffff;
@@ -76,15 +92,22 @@ h1 {
 
 /* ---------- Cartões ---------- */
 .cartoes {
-  /* complete com flexbox */
+  /* Flexbox: os cartoes dividem a linha e quebram quando falta espaco.
+     O gap cuida do espacamento nos dois eixos, inclusive entre as linhas. */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
 }
 
 .cartao {
-  width: 100%;
+  /* grow 1 / shrink 1 / basis 260px: quando os tres cabem eles ficam do mesmo
+     tamanho dividindo a linha; quando nao cabem, o wrap do .cartoes manda o
+     excedente para a linha de baixo. Substitui o width 100%, que era medida de
+     bloco empilhado, e o margin-bottom, que agora e trabalho do gap. */
+  flex: 1 1 260px;
   padding: 20px;
   border: 2px solid #e5e7eb;
   border-radius: 8px;
-  margin-bottom: 16px;
 }
 
 .cartao h3 {
