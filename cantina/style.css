@@ -36,9 +36,10 @@ body {
   padding: 0;
 }
 
-.menu li {
-  margin-left: 610px;
-}
+/* Alinhamento: aqui existia uma regra .menu li com margin-left de 610px, um
+   numero de chute que empurrava cada item para a direita e so "funcionava" nesta largura
+   exata de tela. A regra saiu inteira: o espaco entre os itens passa a vir do
+   gap do flex container e a posicao do menu vem do justify-content do .topo. */
 
 .menu a {
   color: #ffffff;
