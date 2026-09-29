@@ -1,2 +1,5 @@
 # Arquivos do enunciado baixados do AVA
 *.zip
+
+# Capturas de tela usadas so para conferir o resultado
+.playwright-mcp/
